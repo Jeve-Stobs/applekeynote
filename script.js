@@ -129,7 +129,12 @@ window.addEventListener('click', () => {
     dot.tween.restart(true);
   });
 });
-
+window.addEventListener('keyup', event => {
+  if (event.code === 'Space') {
+  dots.forEach(dot => {
+    dot.tween.restart(true);
+  });  }
+})
 window.addEventListener('resize', () => {
   width = svg.clientWidth;
   height = svg.clientHeight;
